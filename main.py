@@ -7,7 +7,9 @@ from PyQt5.uic import loadUi
 class Login(QDialog):
     def __init__(self):
         super(Login, self).__init__()
+
         loadUi("loginauth.ui", self)
+
         self.pushButton.clicked.connect(self.loginfunction)
 
         self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
@@ -40,6 +42,8 @@ class CreateAcc(QDialog):
         super(CreateAcc,self).__init__()
 
         loadUi("signup_auth.ui",self)
+        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_3.setEchoMode(QtWidgets.QLineEdit.Password)
         self.pushButton.clicked.connect(self.createaccfxn)
 
 
@@ -66,6 +70,7 @@ class CreateAcc(QDialog):
 
 
 if __name__ == "__main__":
+
     app = QApplication(sys.argv)
 
 
@@ -92,7 +97,7 @@ if __name__ == "__main__":
 
     # Show the main window
     sys.exit(app.exec_())  
-    
+
     
     
     # Start the application event loop and exit properly when done
