@@ -23,6 +23,9 @@ class Login(QDialog):
 
 
 
+
+    
+
     def gotocreate(self):
         createacc=CreateAcc()
         widget.addWidget(createacc)
@@ -47,8 +50,6 @@ class CreateAcc(QDialog):
         self.pushButton.clicked.connect(self.createaccfxn)
 
 
-
-
     def createaccfxn(self):
 
         email=self.lineEdit.text()
@@ -57,13 +58,6 @@ class CreateAcc(QDialog):
             password=self.lineEdit_2.text()
 
             print("Successfully signedup with email", email,"and Password" ,password)
-
-
-
-
-        
-        
-
 
 
 
